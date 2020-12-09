@@ -1,0 +1,59 @@
+.about-us {
+    width: 1200px;
+    margin: auto;
+}
+.about-us > .content {
+    display: flex;
+    flex-direction: row;
+}
+.about-us > .content > div:first-child {
+    padding: 15px;
+    flex: 1;
+}
+.about-us > .content > div:first-child > img {
+    width: 100%;
+    object-fit: contain;
+}
+.about-us > .content > div:last-child {
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 2rem;
+    flex: 1;
+}
+@media only screen and (max-width: 1210px) {
+    .about-us {
+        width: 1020px;
+    }
+    .about-us > .content > div:last-child {
+        line-height: 1.5rem;
+    }
+}
+@media only screen and (max-width: 1020px) {
+    .about-us {
+        width: 750px;
+    }
+    .about-us > .content {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .about-us {
+        width: 550px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .about-us {
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .about-us {
+        width: 360px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .about-us {
+        width: 280px;
+    }
+}

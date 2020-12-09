@@ -1,0 +1,158 @@
+.wrap-slider {
+    position: relative;
+    height: auto;
+}
+.slider {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+}
+.slider > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all ease-in-out 0.8s;
+}
+.slider > a > img {
+    object-fit: contain;
+    width: 100vw;
+}
+.slider > a .content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    padding: 20px;
+}
+a.active {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    opacity: 1;
+    transition: all ease-in-out 0.8s;
+}
+a.back {
+    z-index: -1;
+    opacity: 1;
+    transition: all ease-in-out 0.8s;
+}
+
+button.previous, button.next {
+    position: absolute;
+    background-color: red;
+    transform: translateY(-50%);
+    z-index: 999;
+    height: 80px;
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all ease 0.5s;
+    opacity: 0;
+}
+.wrap-slider:hover .previous {
+    left: 8%;
+    opacity: 1;
+} 
+.wrap-slider:hover .next {
+    right: 8%;
+    opacity: 1;
+}
+.previous {
+    top: 50%;
+    left: -10%;
+}
+.next {
+    top: 50%;
+    right: -10%;
+}
+.slider:hover + button.previous {
+    background-color: red;
+}
+@media only screen and (max-width: 985px) {
+    .slider {
+        height: 460px;
+
+    }
+}
+@media only screen and (max-width: 910px) {
+    .slider {
+        height: 430px;
+
+    }
+}
+@media only screen and (max-width: 800px) {
+    .slider {
+        height: 400px;
+
+    }
+}
+@media only screen and (max-width: 500px) {
+    .slider {
+        height: 250px;
+    }
+    a.perImg {
+        height: 100%;
+    }
+    a.perImg > img {
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .slider {
+        height: 385px;
+    }
+}
+@media only screen and (max-width: 745px) {
+    .slider {
+        height: 345px;
+    }
+    .wrap-slider > button {
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 720px) {
+    .slider {
+        height: 325px;
+    }
+}
+@media only screen and (max-width: 655px) {
+    .slider {
+        height: 295px;
+    }
+}
+@media only screen and (max-width: 590px) {
+    .slider {
+        height: 275px;
+    }
+}
+@media only screen and (max-width: 541px) {
+    .slider {
+        height: 255px;
+    }
+}
+@media only screen and (max-width: 445px) {
+    .slider {
+        height: 210px;
+    }
+}
+@media only screen and (max-width: 415px) {
+    .slider {
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 376px) {
+    .slider {
+        height: 180px;
+    }
+}
+@media only screen and (max-width: 321px) {
+    .slider {
+        height: 155px;
+    }
+}

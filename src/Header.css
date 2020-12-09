@@ -1,0 +1,228 @@
+:root {
+    --color: #f89938;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 0.1px rgb(207, 207, 207);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 99;
+}
+.header > .top {
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Libre Franklin";
+    color: #fff;
+    background-color: #000033;
+    letter-spacing: 0.1rem;
+}
+.header >.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.menu ul, .functional{
+    display: flex;
+    flex: 1;
+    list-style: none;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menu > ul {
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+.menu > ul li {
+    padding: 14px 5px;
+}
+.menu > ul li:hover .sub-menu {
+    display: flex;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+}
+.functional {
+    justify-content: flex-end;
+    padding: 0;
+}
+.functional > li:first-child {
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 33px;
+}
+.functional > li:first-child > .search {
+    position: absolute;
+    right: 0;
+    transition: all ease 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.functional > li:first-child > .hiddenInputText {
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+} 
+.functional > li:last-child {
+    margin-right: 10px;
+}
+.functional > li:first-child > input {
+    position: absolute;
+    right: 80px;
+    transition: all ease 0.4s;
+    opacity: 0;
+    padding: 5px 15px;
+    width: 85%;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: solid 0.01rem var(--color);
+    outline: none;
+    font-weight: 100;
+    z-index: 99;
+}
+.functional > li:first-child > input.showInputText {
+    right: 0;
+    opacity: 1;
+}
+.hiddenSearchButton {
+    opacity: 0;
+}
+.relust-search {
+    position: absolute;
+    top: 32px;
+    max-height: 450px;
+    width: 230px;
+    background-color: rgba(48, 48, 48, 0.9);
+    display: none;
+    transition: all ease 0.4s;
+    right: 0;
+    z-index: 999;
+}
+.relust-search::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: 15px;
+    width: 20px;
+    clip-path: polygon(45% 0, 0% 100%, 100% 100%);
+    background-color: #f89938;
+}
+div.show-relust {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 20px;
+}
+.close-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.show-close-icon {
+    opacity: 1;
+}
+.logo {
+    flex: 1;
+}
+.logo img {
+    object-fit: contain;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+.link {
+    color: var(--color);
+    margin: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.sub-menu {
+    display: flex;
+    visibility: hidden;
+    height: auto;
+    width: 100vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 99;
+}
+.sub-left {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0 12px 0;
+}
+.sub-left > h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.sub-left > ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sub-left > ul > li {
+    padding: 3px;
+}
+.sub-left > ul > li > .link {
+    color: rgb(83, 83, 83);
+    font-size: 0.9rem;
+    transition: all ease 0.3s;
+
+}
+.sub-left > ul > li > .link:hover {
+    color: #000;
+}
+.sub-right {
+    display: flex;
+    flex: 4;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.sub-right img {
+    height: 200px;
+    object-fit: contain;
+    
+}
+.sub-right h4 {
+    text-align: center;
+    color: rgb(100, 100, 100);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 982px) {
+    .menu {
+        visibility: hidden;
+        opacity: 0;
+        transition: all ease 0.3s;
+    }
+    .functional {
+        display: none;
+    }
+}

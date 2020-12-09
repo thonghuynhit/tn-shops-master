@@ -1,0 +1,168 @@
+.shops {
+    width: 1260px;
+    margin: auto;
+    overflow: hidden;
+}
+div.shops__top {
+    margin: 0;
+}
+.shops__top > h6 {
+    text-align: center;
+    color: #000;
+}
+.shops__top > img {
+    width: 100%;
+}
+.shops__top > h6 > .link--shop {
+    font-weight: 400;
+    color: var(--color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.shops__top > h1 {
+    color: var(--color);
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    border-bottom: solid 0.01rem rgb(223, 223, 223);
+    margin: 20px 0 10px 0;
+}
+.shops__content {
+    display: flex;
+    flex-direction: row;
+}
+.shops__content > .filter {
+    width: 200px;
+}
+.shops__content > .filter > div > h5 {
+    font-weight: 300;
+    color: var(--color);
+    padding: 5px;
+    width: 145px;
+    border-bottom: solid 0.01rem rgb(223, 223, 223);
+}
+.shops__content > .filter > div > select {
+    width: 130px;
+    border-radius: 20px;
+    border: solid 0.01rem var(--color);
+    outline: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: rgb(85, 85, 85);
+    font-weight: 300;
+    background-color: #fff;
+}
+.shops__content > .filter > div > input {
+    color: var(--color);
+}
+.shops__content > .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+@media only screen and (max-width: 1265px) {
+    .shops {
+        width: 1050px;
+    }
+}
+@media only screen and (max-width: 1065px) {
+    .shops {
+        width: 980px;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .shops {
+        width: 940px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .shops {
+        width: 800px;
+    }
+    .shops__content > .products {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 805px) {
+    .shops {
+        width: 700px;
+    }
+    .shops__content {
+        display: flex;
+        flex-direction: column;
+    }
+    .shops__content > .filter {
+        width: 96%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0 20px 5px;
+    }
+    .shops__content > .products {
+        grid-gap: 70px;
+    }
+    .shops__content > .filter > div:first-child > select {
+        margin-left: 10px;
+    }
+    .shops__content > .filter > div > select {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 670px) {
+    .shops {
+        width: 560px;
+    }
+    .shops__content > .products {
+        grid-gap: 50px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .shops {
+        width: 460px;
+    }
+    .shops__content > .products {
+        grid-gap: 30px;
+    }
+    .shops__content > .filter > div:first-child > h5 {
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 468px) {
+    .shops {
+        width: 360px;
+    }
+    .shops__content > .products {
+        grid-gap: 20px;
+    }
+    .shops__content > .filter > div:last-child {
+        display: none;
+    }
+    .shops__content > .filter > div > select {
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 368px) {
+    .shops {
+        width: 280px;
+    }
+    .shops__content > .products {
+        grid-gap: 10px;
+    }
+    .shops__content > .filter > div:first-child > select {
+        margin-left: 20px;
+    }
+    .shops__content > .filter > div > select {
+        width: 100px;
+    }
+    .shops__content > .filter > div:first-child > h5 {
+        padding-left: 25px; 
+    }
+    .shops__content > .filter > div:first-child > select {
+        margin-left: 30px;
+    }
+    .shops__content > .filter > div > select {
+        font-size: 0.6rem;
+    }
+}
+

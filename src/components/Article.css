@@ -1,0 +1,80 @@
+.article {
+    background-color: #fedfc1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+.article > h1 {
+    text-align: center;
+    padding: 20px;
+    color: #f99838;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: "Libre Franklin";
+}
+.article > div.content {
+    width: 80%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+}
+.article > div.style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.article > div.style > img {
+    height: 52px;
+    margin: 15px;
+}
+.article > div.imgAr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.article > div.imgAr > img {
+    width: 115px;
+    margin: 10px;
+}
+@media only screen and (max-width: 930px) {
+    .article {
+        padding: 7px;
+    }
+    .article > div.imgAr {
+        flex-wrap: wrap;
+    }
+    .article > div.imgAr > img {
+        width: auto;
+        height: 40px;
+    }
+    .article > h1 {
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .article {
+        padding: 3px;
+    }
+    .article > div.imgAr > img {
+        width: auto;
+        height: 25px;
+    }
+    .article > h1 {
+        margin: 15px;
+        padding: 3px;
+    }
+}
+@media only screen and (max-width: 321px) {
+    .article > h1 {
+        padding: 0;
+        margin: 10px;
+    }
+    .article > div.style {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,176 @@
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+.app {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+  transition: all 0.6s;
+  border-right: solid 0.01rem rgb(223, 223, 223);
+}
+.checkout {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  min-height: 100vh;
+  background-color: #fff;
+  right: -300px;
+  transition: all 0.6s;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.checkout > div:first-child {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 0.01rem rgb(223, 223, 223);
+}
+.checkout > div:first-child > h2 {
+  margin: 0;
+  color: var(--color);
+}
+.checkout > div:last-child > .subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout > div:last-child > .subtotal > h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(85, 85, 85);
+}
+.checkout > div:last-child > .go-checkout h5 {
+  text-align: center;
+  font-weight: 300;
+  color: rgb(156, 156, 156);
+  margin: 5px 0 10px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.checkout > div:last-child > .go-checkout button {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  border: none;
+  background-color: rgb(0, 0, 51);
+  color: #fff;
+  letter-spacing: 1px;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div.checktoggle {
+  right: 0;
+}
+div.apptoggle {
+  position: relative;
+  right: 300px;
+}
+.scrollTop {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  opacity: 0;
+  transition: all ease 0.4s;
+  color: var(--color);
+  cursor: pointer;
+}
+div.showScroll {
+  opacity: 1;
+}
+.carts {
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+  text-decoration: none;
+  margin-top: 10px;
+  border-bottom: solid 0.01rem rgb(223, 223, 223);
+}
+.carts > .image {
+  width: 90px;
+}
+.carts > .image > img {
+  width: 100%;
+  max-height: 130px;
+  object-fit: contain;
+}
+.carts > .infomation {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.carts > .infomation > .quantity {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+.carts > .infomation > .quantity > * {
+  height: 35px;
+  width: 35px;
+  font-size: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  border: solid 0.01rem var(--color);
+  outline: none;
+  background: none;
+}
+.carts > .infomation > .quantity > input {
+  border-left: none;
+  border-right: none;
+}
+.carts > .infomation > .quantity > button {
+  color: rgb(146, 146, 146);
+  transition: all ease 0.4s;
+}
+.carts > .infomation > .quantity > button:hover {
+  background-color: var(--color);
+  color: #fff;
+}
+.carts > .infomation > .quantity > button:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: rgb(252, 87, 87);
+  border: none;
+  outline: none;
+}
+.carts > .infomation > .quantity > input {
+  color: rgb(44, 44, 44);
+}
+.carts > .infomation > .quantity > button:last-child:hover {
+  background: none;
+  color: rgb(202, 39, 39);
+}
+.carts > .infomation > h3 {
+  text-align: center;
+  letter-spacing: 0.05rem;
+  color: var(--color);
+  margin: 0;
+}
+.carts > .infomation > h4 {
+  margin: 15px 5px;
+  color: var(--color);
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.carts > .infomation > h4 > span {
+  margin-left: 10px;
+}
